@@ -1,0 +1,365 @@
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo
+$ git init
+Initialized empty Git repository in C:/Users/Byron EV/Desktop/Git repo/.git/
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        PYTHON.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git add PYTHON.py
+warning: LF will be replaced by CRLF in PYTHON.py.
+The file will have its original line endings in your working directory
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   PYTHON.py
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   PYTHON.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bla.py
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git add PYTHON.py bla.py
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   PYTHON.py
+        new file:   bla.py
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Byron EV@DESKTOP-O2VFQNP.(none)')
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git config --global user.email "a218211706@unison.mx"
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git config --global user.name "Byron J. Encinas"
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit
+[master (root-commit) 7aa335c] Inicio del proyecto
+ 2 files changed, 42 insertions(+)
+ create mode 100644 PYTHON.py
+ create mode 100644 bla.py
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git log
+commit 7aa335cd4c4e80f861ac02654b14a7e7b3dae632 (HEAD -> master)
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:06:03 2020 -0700
+
+    Inicio del proyecto
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bla.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git checkout --bla.py
+error: unknown option `bla.py'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git checkout -- bla.py
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bla.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git diff --
+.git/      bla.py     PYTHON.py
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git diff -- bla.py
+diff --git a/bla.py b/bla.py
+index e69de29..c6c1b0c 100644
+--- a/bla.py
++++ b/bla.py
+@@ -0,0 +1 @@
++Diosanto como puede ser
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bla.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ gir add
+bash: gir: command not found
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bla.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bla.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git add bla.py
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   bla.py
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit
+[master 54296b5] A+¦ad+¡ una l+¡nea de texto como c+¦digo. No como comentario
+ 1 file changed, 1 insertion(+)
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git log
+commit 54296b56865e0d3617f830d03ce4c2e5d7604044 (HEAD -> master)
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:22:24 2020 -0700
+
+    Añadí una línea de texto como código. No como comentario
+
+commit 7aa335cd4c4e80f861ac02654b14a7e7b3dae632
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:06:03 2020 -0700
+
+    Inicio del proyecto
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ gir status
+bash: gir: command not found
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+warning: unable to access '.gitignore': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git add .gitignore
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ gir commit -m "Hola"
+bash: gir: command not found
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git commit -m "Hola"
+[master 2b0f5e7] Hola
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ gir log
+bash: gir: command not found
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git log
+commit 2b0f5e78a48d2baba1440e3aa8150871a565d5b2 (HEAD -> master)
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:30:39 2020 -0700
+
+    Hola
+
+commit 54296b56865e0d3617f830d03ce4c2e5d7604044
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:22:24 2020 -0700
+
+    Añadí una línea de texto como código. No como comentario
+
+commit 7aa335cd4c4e80f861ac02654b14a7e7b3dae632
+Author: Byron J. Encinas <a218211706@unison.mx>
+Date:   Sun Aug 9 20:06:03 2020 -0700
+
+    Inicio del proyecto
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git branch
+* master
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git branch ArchivosAlterados
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git checkout
+ArchivosAlterados   HEAD                master
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (master)
+$ git checkout ArchivosAlterados
+Switched to branch 'ArchivosAlterados'
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (ArchivosAlterados)
+$ git branch
+* ArchivosAlterados
+  master
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (ArchivosAlterados)
+$ git status
+On branch ArchivosAlterados
+nothing to commit, working tree clean
+
+Byron EV@DESKTOP-O2VFQNP MINGW64 ~/Desktop/Git repo (ArchivosAlterados)
+$
